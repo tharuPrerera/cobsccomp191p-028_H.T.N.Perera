@@ -23,20 +23,33 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var password: UITextField!
     
     
-    @IBAction func btnSignIn(_ sender: UIButton) {
+  /*  @IBAction func btnSignIn(_ sender: UIButton) {
+      
+    }
+    
+   */
+    
+    @IBAction func btnSigninUser(_ sender: UIButton) {
+        
         if let email = email.text, let password = password.text{
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
-               // guard let strongSelf = self else { return }
+                // guard let strongSelf = self else { return }
                 if let e = error{
                     print(e)
                 }else{
                     print("Login Success")
-                     self.performSegue(withIdentifier: "LoginSegway", sender: self)
+                    self.performSegue(withIdentifier: "seglogin" , sender: self)
                 }
-              
+                
             }
         }
+        
+        
+        
+        
+        
     }
+    
     
     /*
     // MARK: - Navigation

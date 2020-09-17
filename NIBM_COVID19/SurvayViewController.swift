@@ -12,7 +12,7 @@ class SurvayViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+displayDATA()
         // Do any additional setup after loading the view.
     }
     
@@ -30,10 +30,10 @@ class SurvayViewController: UIViewController {
     @IBOutlet weak var btnNo: UIButton!
     
     let qAndAns = [
-    ["Q1","No"],
-    ["Q2","No"],
-    ["Q3","No"],
-    ["Q4","No"]
+    ["Are you having any sympotoms ","No"],
+    ["Have you been exposed with crowed places","No"],
+    ["have you been unteracted with sick people","No"],
+    ["Have you been Traveld last 14 days","No"]
     ]
     
     var queNo = 0
@@ -52,20 +52,60 @@ class SurvayViewController: UIViewController {
 
     
     @IBAction func hetServayAns(_ sender: UIButton) {
-//        let usrAnswer = 
-//        
-//        let usrAnswer = usrAnswer{
-//            print("write")
-//            total += 1
-//            print (total)
-//        }
-//        else{
-//            print("Wrong")
-//        }
+        let usrAnswer = sender.currentTitle
+        let  getAns =  qAndAns[queNo][1]
         
         
+      if  getAns == usrAnswer{
+           print("write")
+           total += 1
+           print (total)
+       }
+       else {
+           print("Wrong")
+       }
+        
+        if queNo + 1 < qAndAns.count
+        {
+            queNo += 1
+        }
+        
+        displayDATA()
+    }
+    func displayDATA() {
+        imgSurvay.image = UIImage(named: "lo\(queNo).png")
+        quizLable.text = qAndAns[queNo][0]
     }
     
+    @IBAction func okButtenShow(_ sender: Any) {
+        
+        var status = "Good"
+        if total > 2{
+            status = "Good"
+            
+        }
+        if total == 2{
+            status = "Medium"
+            
+        }
+        if total < 2{
+            status = "In Risk"
+            
+        }
+        self.performSegue(withIdentifier: "userDataSeg", sender: status)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let destin = segue.destination as? MyMenuViewController{
+            if let uData = sender as? String{
+                
+                destin.selectedDatedData = uData
+            }
+            
+        }
+        
+    }
     
     
 }

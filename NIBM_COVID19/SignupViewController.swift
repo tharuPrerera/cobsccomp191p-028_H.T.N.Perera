@@ -38,7 +38,7 @@ class SignupViewController: UIViewController {
                 if let e = error{
                     print(e)
                 }else{
-                    self.performSegue(withIdentifier: "signUpSegway", sender:self)
+                   // self.performSegue(withIdentifier: "signUpSegway", sender:self)
                 }
             }
         }
