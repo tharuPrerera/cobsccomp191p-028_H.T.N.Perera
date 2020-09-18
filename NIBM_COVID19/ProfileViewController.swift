@@ -75,7 +75,11 @@ class ProfileViewController: UIViewController {
     }
     
     
-
+    @IBAction func backButten(_ sender: UIButton) {
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
