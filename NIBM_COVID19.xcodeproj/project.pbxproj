@@ -13,6 +13,8 @@
 		8C35A5012512459500FD270B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C35A5002512459500FD270B /* LoginViewController.swift */; };
 		8C35A5032512462400FD270B /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C35A5022512462400FD270B /* LogoutViewController.swift */; };
 		8C35A505251246DE00FD270B /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C35A504251246DE00FD270B /* SignupViewController.swift */; };
+		8C367C6E2514659500CC1C3D /* BackButtenPressedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C367C6D2514659500CC1C3D /* BackButtenPressedViewController.swift */; };
+		8C367C712514824B00CC1C3D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C367C702514824B00CC1C3D /* ProfileViewController.swift */; };
 		8CBD711825125AE7003CCC90 /* SurvayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CBD711725125AE7003CCC90 /* SurvayViewController.swift */; };
 		ACA1192A250F955B003E7F1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA11929250F955B003E7F1B /* AppDelegate.swift */; };
 		ACA1192C250F955B003E7F1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA1192B250F955B003E7F1B /* ViewController.swift */; };
@@ -55,6 +57,8 @@
 		8C35A5002512459500FD270B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8C35A5022512462400FD270B /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
 		8C35A504251246DE00FD270B /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignupViewController.swift; path = "/Users/digital-02/Desktop/THARU/cobsccomp191p-028_H.T.N.Perera/NIBM_COVID19/SignupViewController.swift"; sourceTree = "<absolute>"; };
+		8C367C6D2514659500CC1C3D /* BackButtenPressedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BackButtenPressedViewController.swift; path = "/Users/digital-02/Desktop/THARU/cobsccomp191p-028_H.T.N.Perera/NIBM_COVID19/BackButtenPressedViewController.swift"; sourceTree = "<absolute>"; };
+		8C367C702514824B00CC1C3D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8CBD711725125AE7003CCC90 /* SurvayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurvayViewController.swift; sourceTree = "<group>"; };
 		ACA11926250F955B003E7F1B /* NIBM_COVID19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NIBM_COVID19.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACA11929250F955B003E7F1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +120,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		8C367C6F25146B3200CC1C3D /* controlers */ = {
+			isa = PBXGroup;
+			children = (
+				8C35A5002512459500FD270B /* LoginViewController.swift */,
+			);
+			path = controlers;
+			sourceTree = "<group>";
+		};
 		ACA1191D250F955B003E7F1B = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +153,7 @@
 		ACA11928250F955B003E7F1B /* NIBM_COVID19 */ = {
 			isa = PBXGroup;
 			children = (
+				8C367C6F25146B3200CC1C3D /* controlers */,
 				8C35A4FE2512443C00FD270B /* GoogleService-Info.plist */,
 				ACA11929250F955B003E7F1B /* AppDelegate.swift */,
 				ACA1192B250F955B003E7F1B /* ViewController.swift */,
@@ -149,11 +162,12 @@
 				ACA11935250F955B003E7F1B /* LaunchScreen.storyboard */,
 				ACA11938250F955B003E7F1B /* Info.plist */,
 				ACA11930250F955B003E7F1B /* NIBM_COVID19.xcdatamodeld */,
-				8C35A5002512459500FD270B /* LoginViewController.swift */,
 				8C35A504251246DE00FD270B /* SignupViewController.swift */,
 				8C35A5022512462400FD270B /* LogoutViewController.swift */,
 				8CBD711725125AE7003CCC90 /* SurvayViewController.swift */,
+				8C367C6D2514659500CC1C3D /* BackButtenPressedViewController.swift */,
 				8C0333E32513990200993D2A /* MyMenuViewController.swift */,
+				8C367C702514824B00CC1C3D /* ProfileViewController.swift */,
 			);
 			path = NIBM_COVID19;
 			sourceTree = "<group>";
@@ -429,9 +443,11 @@
 			files = (
 				8C35A505251246DE00FD270B /* SignupViewController.swift in Sources */,
 				8C35A5012512459500FD270B /* LoginViewController.swift in Sources */,
+				8C367C712514824B00CC1C3D /* ProfileViewController.swift in Sources */,
 				ACA1192C250F955B003E7F1B /* ViewController.swift in Sources */,
 				ACA11932250F955B003E7F1B /* NIBM_COVID19.xcdatamodeld in Sources */,
 				8C35A5032512462400FD270B /* LogoutViewController.swift in Sources */,
+				8C367C6E2514659500CC1C3D /* BackButtenPressedViewController.swift in Sources */,
 				8CBD711825125AE7003CCC90 /* SurvayViewController.swift in Sources */,
 				ACA1192A250F955B003E7F1B /* AppDelegate.swift in Sources */,
 				8C0333E42513990200993D2A /* MyMenuViewController.swift in Sources */,

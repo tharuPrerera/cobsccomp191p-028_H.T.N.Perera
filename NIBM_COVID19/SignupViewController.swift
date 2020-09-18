@@ -32,6 +32,8 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var password: UITextField!
     
     
+    var ref: DatabaseReference!
+    
     @IBAction func btnSingUp(_ sender: Any) {
         if let email = email.text, let password = password.text{
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
@@ -39,10 +41,26 @@ class SignupViewController: UIViewController {
                     print(e)
                 }else{
                    // self.performSegue(withIdentifier: "signUpSegway", sender:self)
+                    
+                   let uid = authResult?.user.uid
+                    let userFName = self.firstName.text
+                    let userLName = self.lastName.text
+                    let emailD = self.email.text
+                    let roleu = self.role.text
+                    
+                    
+                    
+                    self.ref = Database.database().reference()
+                    self.ref.child("users").child(uid ?? "").setValue(["username": userFName, "lastName": userLName , "email" : emailD, "roleu" : roleu])
+                    
+                    self.performSegue(withIdentifier: "signUpSegway", sender:self)
+                    
                 }
             }
         }
         
+        
+       
     }
     
     /*

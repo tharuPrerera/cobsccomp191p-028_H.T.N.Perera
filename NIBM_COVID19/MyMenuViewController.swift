@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class MyMenuViewController: UIViewController {
     
@@ -58,7 +59,16 @@ class MyMenuViewController: UIViewController {
             
         }
         // Do any additional setup after loading the view.
+        
+        let userId = Auth.auth().currentUser?.uid
+        
+        print(userId as Any)
+        
+        
     }
+    
+
+    
     
 
     /*
